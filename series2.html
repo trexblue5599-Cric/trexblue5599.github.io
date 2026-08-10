@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Series 2 - Gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: #1a1a2e;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #ffd700;
+        }
+        .back {
+            display: inline-block;
+            background: #ffd700;
+            color: #1a1a2e;
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 15px;
+            border: 2px solid #ffd700;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        @media (max-width: 400px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back">⬅ Back to Home</a>
+    <h1>📺 Series Two</h1>
+    <p>Collectable Cards Gallery</p>
+
+    <div class="gallery">
+        <!-- REPLACE these with YOUR images -->
+        <img src="https://picsum.photos/200/200?random=20" alt="Card 1">
+        <img src="https://picsum.photos/200/200?random=21" alt="Card 2">
+        <img src="https://picsum.photos/200/200?random=22" alt="Card 3">
+        <img src="https://picsum.photos/200/200?random=23" alt="Card 4">
+        <img src="https://picsum.photos/200/200?random=24" alt="Card 5">
+        <img src="https://picsum.photos/200/200?random=25" alt="Card 6">
+    </div>
+</body>
+</html>
