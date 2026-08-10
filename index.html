@@ -1,12 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>T-Rex Blue Official</title>
+    <title>T-Rex Pro Official</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: #1a1a2e;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #ffd700;
+            font-size: 32px;
+            text-shadow: 0 0 20px #ffd700;
+        }
+        .series {
+            background: #16213e;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 400px;
+            border: 2px solid #ffd700;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .series:hover {
+            transform: scale(1.05);
+        }
+        .series img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 15px;
+        }
+        .series h2 {
+            color: #ffd700;
+        }
+        .series p {
+            color: #aaa;
+        }
+        a {
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-    <h1>🦖 T-Rex Blue Official</h1>
-    <img src="https://picsum.photos/300" alt="T-Rex" width="300">
-    <p>Welcome to my website!</p>
+    <h1>🦖 T-Rex Pro Official</h1>
+    <p>Collectable Cards</p>
+
+    <!-- SERIES ONE -->
+    <a href="series1.html">
+        <div class="series">
+            <h2>📺 SERIES ONE</h2>
+            <h3>Oggy and the Cockroaches</h3>
+            <img src="https://picsum.photos/300/200?random=1" alt="Oggy">
+            <p>👆 Click to view gallery</p>
+        </div>
+    </a>
+
+    <!-- SERIES TWO -->
+    <a href="series2.html">
+        <div class="series">
+            <h2>📺 SERIES TWO</h2>
+            <h3>Another Cartoon</h3>
+            <img src="https://picsum.photos/300/200?random=2" alt="Cartoon 2">
+            <p>👆 Click to view gallery</p>
+        </div>
+    </a>
 </body>
 </html>
