@@ -15,28 +15,45 @@
             100% { opacity: 1; transform: scale(1); }
         }
 
+        @keyframes floatGlow {
+            0% { background-position: 0% 0%; }
+            50% { background-position: 100% 100%; }
+            100% { background-position: 0% 0%; }
+        }
+
+        /* === FULL BLACK THEME + RANDOM PATTERNS === */
         body {
-            background: #1a1a2e;
+            background-color: #000000;
+            /* RANDOM GLOWING SPOTS + TECH GRID PATTERN */
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(255, 215, 0, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 90% 70%, rgba(255, 215, 0, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 50% 90%, rgba(255, 215, 0, 0.06) 0%, transparent 35%),
+                repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.02) 0px, rgba(255, 255, 255, 0.02) 2px, transparent 2px, transparent 10px);
             color: white;
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 20px;
             animation: fadeIn 1s ease-out;
+            min-height: 100vh;
         }
 
         h1 {
             animation: slideIn 0.8s ease-out;
         }
 
+        /* === GLOWING SERIES CARDS === */
         .series {
-            background: #16213e;
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(5px);
             border-radius: 20px;
             padding: 20px;
             margin: 20px auto;
             max-width: 400px;
-            border: 2px solid #ffd700;
+            border: 1px solid #ffd700;
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.15);
             cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: all 0.3s ease;
             animation: fadeIn 1s ease-out;
             animation-fill-mode: both;
         }
@@ -44,26 +61,31 @@
         .series:nth-child(1) {
             animation-delay: 0.2s;
         }
-
         .series:nth-child(2) {
             animation-delay: 0.4s;
         }
 
         .series:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+            transform: scale(1.03);
+            border-color: #ffd700;
+            box-shadow: 0 0 50px rgba(255, 215, 0, 0.3);
+            background: rgba(20, 15, 0, 0.9);
         }
 
         .series img {
             width: 100%;
             max-width: 300px;
             border-radius: 15px;
+            border: 1px solid rgba(255, 215, 0, 0.2);
         }
 
         .series h2 {
             color: #ffd700;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
         }
-
+        .series h3 {
+            color: #eee;
+        }
         .series p {
             color: #aaa;
         }
@@ -72,47 +94,70 @@
             text-decoration: none;
         }
 
+        /* === ABOUT SECTION (Transparent + Glow) === */
         .about {
-    /* background: #16213e;  <-- REMOVED */
-    /* border-left: 4px solid #ffd700;  <-- REMOVED */
-    padding: 30px;
-    margin: 30px auto;
-    max-width: 500px;
-    text-align: left;
-    color: #ddd;
-    animation: fadeIn 1.2s ease-out;
-    animation-delay: 0.6s;
-    animation-fill-mode: both;
+            padding: 30px;
+            margin: 30px auto;
+            max-width: 500px;
+            text-align: left;
+            color: #ddd;
+            text-shadow: 0 0 30px rgba(0,0,0,0.9);
+            border-left: 3px solid rgba(255, 215, 0, 0.3);
+            box-shadow: -5px 0 30px rgba(255, 215, 0, 0.05);
+            animation: fadeIn 1.2s ease-out;
+            animation-delay: 0.6s;
+            animation-fill-mode: both;
         }
-
         .about h2 {
             color: #ffd700;
             text-align: center;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
         }
-
         .about p {
             font-size: 16px;
             line-height: 1.8;
         }
-
         .about strong {
             color: #ffd700;
+        }
+
+        /* === REQUEST BUTTON (Glowing) === */
+        .request-btn {
+            display: inline-block;
+            background: transparent;
+            border: 1px solid #ffd700;
+            color: #ffd700;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.1);
+        }
+        .request-btn:hover {
+            background: #ffd700;
+            color: #000000;
+            box-shadow: 0 0 60px rgba(255, 215, 0, 0.4);
         }
     </style>
 </head>
 <body>
 
     <!-- LOGO + TITLE -->
-    <h1 style="font-size: 54px; color: #ffd700; text-align: center;">
-        <img src="trex1.png" alt="Logo" style="height: 180px; width: auto; display: block; margin: 0 auto 15px;">
+    <h1 style="font-size: 54px; color: #ffd700; text-align: center; text-shadow: 0 0 40px rgba(255, 215, 0, 0.15);">
+        <img src="trex1.png" alt="Logo" style="height: 180px; width: auto; display: block; margin: 0 auto 15px; filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.3));">
         T-Rex Pro Official
     </h1>
+
     <!-- REQUEST BUTTON -->
-<div style="text-align: center; margin: 5px 0 20px 0;">
-    <a href="mailto:trexblue5599@gmail.com?subject=Request%20from%20T-Rex%20Pro%20Website&body=Hi%20T-Rex%20Pro%20Team,%0A%0AI%20have%20a%20request%20regarding...%0A%0AThanks!" class="request-btn">
-        📧 Any Request?
-    </a>
-</div>
+    <div style="text-align: center; margin: 5px 0 20px 0;">
+        <a href="mailto:trexblue5599@gmail.com?subject=Request%20from%20T-Rex%20Pro%20Website&body=Hi%20T-Rex%20Pro%20Team,%0A%0AI%20have%20a%20request%20regarding...%0A%0AThanks!" class="request-btn">
+            📧 Any Request?
+        </a>
+    </div>
+
     <!-- SERIES ONE -->
     <a href="series1.html">
         <div class="series">
@@ -151,7 +196,7 @@
         <p>
             🚀 This is just the beginning! More series, more characters, and more adventures are on the way. Stay tuned and keep collecting!
         </p>
-        <p style="font-size: 18px; color: #ffd700; text-align: center; font-weight: bold; margin-top: 20px;">
+        <p style="font-size: 18px; color: #ffd700; text-align: center; font-weight: bold; margin-top: 20px; text-shadow: 0 0 30px rgba(255, 215, 0, 0.3);">
             ⭐ Together, we're building something amazing! ⭐
         </p>
     </div>
