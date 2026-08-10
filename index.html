@@ -4,18 +4,30 @@
     <title>T-Rex Pro Official</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        /* === ANIMATIONS === */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideIn {
+            0% { opacity: 0; transform: scale(0.9); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
         body {
             background: #1a1a2e;
             color: white;
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 20px;
+            animation: fadeIn 1s ease-out;
         }
+
         h1 {
-            color: #ffd700;
-            font-size: 32px;
-            text-shadow: 0 0 20px #ffd700;
+            animation: slideIn 0.8s ease-out;
         }
+
         .series {
             background: #16213e;
             border-radius: 20px;
@@ -24,40 +36,85 @@
             max-width: 400px;
             border: 2px solid #ffd700;
             cursor: pointer;
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeIn 1s ease-out;
+            animation-fill-mode: both;
         }
+
+        .series:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .series:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
         .series:hover {
             transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
         }
+
         .series img {
             width: 100%;
             max-width: 300px;
             border-radius: 15px;
         }
+
         .series h2 {
             color: #ffd700;
         }
+
         .series p {
             color: #aaa;
         }
+
         a {
             text-decoration: none;
+        }
+
+        .about {
+            background: #16213e;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px auto;
+            max-width: 500px;
+            border: 2px solid #ffd700;
+            text-align: left;
+            color: #ddd;
+            animation: fadeIn 1.2s ease-out;
+            animation-delay: 0.6s;
+            animation-fill-mode: both;
+        }
+
+        .about h2 {
+            color: #ffd700;
+            text-align: center;
+        }
+
+        .about p {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .about strong {
+            color: #ffd700;
         }
     </style>
 </head>
 <body>
+
+    <!-- LOGO + TITLE -->
     <h1 style="font-size: 54px; color: #ffd700; text-align: center;">
-    <img src="trex1.png" alt="Logo" style="height: 180px; width: auto; display: block; margin: 0 auto 15px;">
-    T-Rex Pro Official
+        <img src="trex1.png" alt="Logo" style="height: 180px; width: auto; display: block; margin: 0 auto 15px;">
+        T-Rex Pro Official
     </h1>
-    <p>Collectable Cards</p>
 
     <!-- SERIES ONE -->
     <a href="series1.html">
         <div class="series">
             <h2>📺 SERIES ONE</h2>
             <h3>Oggy and the Cockroaches</h3>
-            <img src="oggy1.jpg" alt="Oggy Card 1">
+            <img src="oggy1.jpg" alt="Oggy">
             <p>👆 Click to view gallery</p>
         </div>
     </a>
@@ -71,27 +128,29 @@
             <p>👆 Click to view gallery</p>
         </div>
     </a>
+
     <!-- ABOUT SECTION -->
-<div style="background: #16213e; border-radius: 20px; padding: 30px; margin: 30px auto; max-width: 500px; border: 2px solid #ffd700; text-align: left; color: #ddd;">
-    <h2 style="color: #ffd700; text-align: center;">🌟 About Our Journey</h2>
-    <p style="font-size: 16px; line-height: 1.8;">
-        We are thrilled to announce the launch of <strong style="color: #ffd700;">T-Rex Pro Official</strong> – a brand new venture dedicated to bringing you the best in animated collectable cards!
-    </p>
-    <p style="font-size: 16px; line-height: 1.8;">
-        🎬 We are starting an <strong style="color: #ffd700;">ANIMATED CARTOON</strong> series featuring your favorite characters from childhood classics like <strong style="color: #ffd700;">Oggy and the Cockroaches</strong> and many more to come!
-    </p>
-    <p style="font-size: 16px; line-height: 1.8;">
-        💼 This is not just a hobby – this is a <strong style="color: #ffd700;">BUSINESS</strong> built with love, passion, and countless hours of hard work. From designing each card to building this website, every detail has been crafted with care.
-    </p>
-    <p style="font-size: 16px; line-height: 1.8;">
-        🙏 We want to say a <strong style="color: #ffd700;">HUGE THANK YOU</strong> to all our supporters, family, and friends who believed in us. Your encouragement means the world to us!
-    </p>
-    <p style="font-size: 16px; line-height: 1.8;">
-        🚀 This is just the beginning! More series, more characters, and more adventures are on the way. Stay tuned and keep collecting!
-    </p>
-    <p style="font-size: 18px; color: #ffd700; text-align: center; font-weight: bold; margin-top: 20px;">
-        ⭐ Together, we're building something amazing! ⭐
-    </p>
-</div>
+    <div class="about">
+        <h2>🌟 About Our Journey</h2>
+        <p>
+            We are thrilled to announce the launch of <strong>T-Rex Pro Official</strong> – a brand new venture dedicated to bringing you the best in animated collectable cards!
+        </p>
+        <p>
+            🎬 We are starting an <strong>ANIMATED CARTOON</strong> series featuring your favorite characters from childhood classics like <strong>Oggy and the Cockroaches</strong> and many more to come!
+        </p>
+        <p>
+            💼 This is not just a hobby – this is a <strong>BUSINESS</strong> built with love, passion, and countless hours of hard work. From designing each card to building this website, every detail has been crafted with care.
+        </p>
+        <p>
+            🙏 We want to say a <strong>HUGE THANK YOU</strong> to all our supporters, family, and friends who believed in us. Your encouragement means the world to us!
+        </p>
+        <p>
+            🚀 This is just the beginning! More series, more characters, and more adventures are on the way. Stay tuned and keep collecting!
+        </p>
+        <p style="font-size: 18px; color: #ffd700; text-align: center; font-weight: bold; margin-top: 20px;">
+            ⭐ Together, we're building something amazing! ⭐
+        </p>
+    </div>
+
 </body>
 </html>
